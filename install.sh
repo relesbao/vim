@@ -1,0 +1,10 @@
+#!/bin/bash
+
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+
+rm -rf $HOME/.vim 2> /dev/null
+rm -f $HOME/.vimrc 2> /dev/null
+mkdir -p $HOME/.vim/bundle
+ln -s $DIR/vimrc $HOME/.vimrc
+git clone https://github.com/VundleVim/Vundle.vim.git $HOME/.vim/bundle/Vundle.vim
+vim +PluginInstall +qall
