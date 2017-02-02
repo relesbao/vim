@@ -9,6 +9,7 @@ call vundle#begin()
     Plugin 'bling/vim-airline'
     Plugin 'kien/ctrlp.vim'
     Plugin 'stanangeloff/php.vim'
+    Plugin '2072/PHP-Indenting-for-VIm'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -52,8 +53,7 @@ set writebackup
 augroup configgroup
     autocmd!
     autocmd VimEnter * highlight clear SignColumn
-    autocmd BufWritePre *.php,*.py,*.js,*.txt,*.hs,*.java,*.md
-                \:call <SID>StripTrailingWhitespaces()
+    autocmd BufWritePre *.php,*.py,*.js,*.txt,*.hs,*.java,*.md call <SID>StripTrailingWhitespaces()
 augroup END
 
 " strips trailing whitespace at the end of files. this
