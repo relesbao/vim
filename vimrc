@@ -9,7 +9,6 @@ call vundle#begin()
     Plugin 'bling/vim-airline'
     Plugin 'kien/ctrlp.vim'
     Plugin 'stanangeloff/php.vim'
-    Plugin '2072/PHP-Indenting-for-VIm'
     Plugin 'altercation/vim-colors-solarized'
 
 call vundle#end()            " required
@@ -24,6 +23,7 @@ let g:ctrlp_working_path_mode = ''
 syntax enable
 set tabstop=4
 set softtabstop=4
+set shiftwidth=4
 set expandtab
 set background=dark
 set t_Co=256
@@ -73,6 +73,12 @@ nmap <leader>bq :bp <BAR> bd #<CR>
 " Show all open buffers and their status
 nmap <leader>bl :ls<CR>
 
+" Personal shortcuts
+nmap <leader>d yypk<CR>
+
+set backup
+
+set backup
 
 set backup
 set backupdir=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
