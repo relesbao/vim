@@ -76,9 +76,11 @@ nmap <leader>bl :ls<CR>
 " Personal shortcuts
 nmap <leader>d yypk<CR>
 
-set backup
-
-set backup
+" Identation
+vnoremap < <gv
+vnoremap > >gv
+vmap <TAB> >
+vmap <S-TAB> <
 
 set backup
 set backupdir=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
