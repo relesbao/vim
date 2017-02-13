@@ -40,7 +40,7 @@ set mouse=a
 filetype indent on
 set wildmenu
 set showmatch
-
+set wildmode=longest,list:full
 set incsearch
 set hlsearch
 
@@ -49,6 +49,8 @@ nnoremap k gk
 
 nnoremap B ^
 nnoremap E $
+
+map <BS> :noh<cr>
 
 let mapleader = "\<Space>"
 
@@ -87,7 +89,6 @@ set backupdir=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
 set backupskip=/tmp/*,/private/tmp/*
 set directory=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
 set writebackup
-
 
 augroup configgroup
     autocmd!
