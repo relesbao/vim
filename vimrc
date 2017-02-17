@@ -20,6 +20,8 @@ let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
 let g:ctrlp_working_path_mode = ''
 
+set ttimeoutlen=0
+
 syntax enable
 set tabstop=4
 set softtabstop=4
