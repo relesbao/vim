@@ -120,3 +120,6 @@ augroup phpSyntaxOverride
   autocmd!
   autocmd FileType php call PhpSyntaxOverride()
 augroup END
+
+
+autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
