@@ -10,3 +10,7 @@ ln -s $DIR/vimrc $HOME/.vimrc
 ln -s $DIR/tmux $HOME/.tmux.conf
 git clone https://github.com/VundleVim/Vundle.vim.git $HOME/.vim/bundle/Vundle.vim
 vim +PluginInstall +qall
+
+# YouCompleteMe
+cd $HOME/.vim/bundle/YouCompleteMe
+./install.py --clang-completer
