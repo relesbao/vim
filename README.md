@@ -6,3 +6,10 @@ To install
     git clone https://github.com/relesbao/vim.git
     cd vim && chmod +x install.sh && ./install.sh
 ```
+
+# Dependencies
+
+- Git
+- Vim
+- Tmux
+- Cmake
