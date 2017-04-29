@@ -123,3 +123,10 @@ augroup END
 
 
 autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
+
+
+" Avoid no compile flags error when editing cpp files
+let g:ycm_global_ycm_extra_conf = '~/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py'
+
+" Autoclose preview window after insert
+let g:ycm_autoclose_preview_window_after_insertion = 1
