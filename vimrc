@@ -6,11 +6,12 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
     Plugin 'VundleVim/Vundle.vim'
-    Plugin 'Valloric/YouCompleteMe'
     Plugin 'bling/vim-airline'
     Plugin 'kien/ctrlp.vim'
-    Plugin 'stanangeloff/php.vim'
     Plugin 'altercation/vim-colors-solarized'
+    Plugin 'tpope/vim-fugitive' 
+    Plugin 'scrooloose/syntastic'
+	Plugin 'valloric/youcompleteme'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -111,16 +112,6 @@ function! <SID>StripTrailingWhitespaces()
     call cursor(l, c)
 endfunction
 
-function! PhpSyntaxOverride()
-  hi! def link phpDocTags  phpDefine
-  hi! def link phpDocParam phpType
-endfunction
-
-augroup phpSyntaxOverride
-  autocmd!
-  autocmd FileType php call PhpSyntaxOverride()
-augroup END
-
 
 autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
 
@@ -130,3 +121,13 @@ let g:ycm_global_ycm_extra_conf = '~/.vim/bundle/YouCompleteMe/third_party/ycmd/
 
 " Autoclose preview window after insert
 let g:ycm_autoclose_preview_window_after_insertion = 1
+
+" Syntastic
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
